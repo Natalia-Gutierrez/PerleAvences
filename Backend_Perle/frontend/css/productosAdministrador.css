@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/*Características generales*/
+h1 {
+    color:#62766e;
+    font-size: 250%;
+}
+h5 {
+    color:#616161;
+}
+#contenido {
+    font-family: 'Urbanist',sans-serif;
+    margin: 3%;
+}
+.encabezado .botonAtras, .modal-header .boton {
+    position: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    border-radius: 100%;
+    border-width: 0px;
+    background-color: #e1ede7;
+}
+.encabezado {
+    grid-area: encabezado;
+    display: flex;
+    align-items: center;
+    gap: 2%;
+}
+.btn_agregarProducto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 0px;
+    background-color: #eecabd;
+    color: white;
+    width: 15vw;
+    border-radius: 3px;
+    min-width: 200px;
+    font-size: 90%;
+    font-family: 'Urbanist', sans-serif;
+    padding: 2% 2%;
+    gap: 3%;
+}
+.btn_agregarProducto:hover {
+    background: palevioletred;
+}
+.botonAgregar {
+    margin-top: 1.3%;
+    float: right;
+}
+.buscar {
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+}
+.buscar input {
+    margin-left: 2%;
+    font-family: 'Urbanist',sans-serif;
+    font-size: 90%;
+    padding: 0% 1%;
+    width: 35%;
+    height: 4vh;
+    background: #f3f3f3;
+    border-width: 0px;
+    outline: 0px;
+    border-radius: 10px;
+}
+.todosProductos {
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top: 2%;
+}
+
+/*Pantalla agregar producto*/
+.modal-header, .modal-footer {
+    border-width: 0 !important;
+}
+
+/*header: titulo*/
+.modal-header {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.modal-header .boton {
+    width: 44px;
+    height: 44px;
+    background-color: #ededed;
+    margin-right: 20px;
+}
+.modal-header .boton img {
+    width: 22px;
+}
+.modal-title{
+    font-family: 'Urbanist', sans-serif !important;
+    color: #616161;
+    font-size: 22px;
+    font-weight: 550;
+}
+
+/*Contenido*/
+.contenido-body {
+    display: grid;
+    grid-template-columns:50% 50%;
+    grid-column-gap: 20px;
+    grid-template-rows: 100%;
+    grid-template-areas: "img contenido";
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.contenido-body-img {
+    margin-top: 15px;
+    grid-area: img;
+    position: relative;
+}
+.contenido-body-img img {
+    width: 90%;
+}
+.boton-agregar-imagen img, .boton-editar-imagen img {
+    width: 20px;
+    text-align: center;
+}
+.boton-agregar-imagen, .boton-editar-imagen {
+    border-width: 0;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top:5px;
+    right: 40px;
+}
+.contenido-body-2 {
+    grid-area: contenido;
+}
+
+/*Grid para el formulario*/
+.formulario{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: repeat(7,auto);
+    grid-template-areas: "nombre cajita-nombre"
+                         "tipo cajita-tipo"
+                         "linea cajita-linea"
+                         "precio cajita-precio"
+                         "descripcion descripcion"
+                         "cajita-descripcion cajita-descripcion"
+                         "etiqueta cajita-etiqueta";
+    grid-row-gap: 15px;
+}
+.formulario .np{
+    grid-area: nombre;
+}
+.formulario .nombreProducto {
+    grid-area: cajita-nombre;
+}
+.formulario .tp {
+    grid-area: tipo;
+}
+.formulario .tipo_producto {
+    grid-area: cajita-tipo;
+}
+.formulario .lp {
+    grid-area: linea;
+}
+.formulario .lineasDeProductos {
+    grid-area: cajita-linea;
+}
+.formulario .pp {
+    grid-area: precio;
+}
+.formulario .espacioPrecio {
+    grid-area: cajita-precio;
+}
+.formulario .dp {
+    grid-area: descripcion;
+}
+.formulario .description{
+    grid-area: cajita-descripcion;
+}
+.formulario .ep {
+    grid-area: etiqueta;
+}
+.formulario .etiquetaProducto {
+    grid-area: cajita-etiqueta;
+}
+
+/*Caracteristicas del formulario*/
+.botonAgregar {
+    font-family: 'Urbanist',sans-serif;
+}
+.botonAgregar input, .botonAgregar select, #editarProducto input, #editarProducto select{
+    font-family: 'Urbanist',sans-serif;
+    font-size: 95%;
+    padding: 0% 1%;
+    width: 100%;
+    height: 4vh;
+    border-color: #d4d7d9;
+    border-style: solid;
+    border-width: 0.2px;
+    outline: 0px;
+}
+.formulario .precioProducto, #editarProducto .precioProducto{
+    width: 90%;
+}
+.formulario textarea {
+    font-family: 'Urbanist',sans-serif;
+    font-size: 95%;
+    padding: 1% 1%;
+    width: 100%;
+    border-color: #d4d7d9;
+    border-style: solid;
+    border-width: 0.2px;
+    outline: 0px;
+}
+
+/*modal-footer: botones inferiores*/
+.btn_cancelar, .boton-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 0px;
+    background-color: #f59898;
+    color: white;
+    width: 12vw;
+    border-radius: 3px;
+    font-size: 90%;
+    font-family: 'Urbanist', sans-serif;
+    padding: 0.5% 2%;
+    gap: 3%;
+    position: absolute;
+    left: 30px;
+}
+.btn_cancelar:hover, .boton-modal:hover {
+    background-color: #ef5350;
+}
+.btn_agregar {
+    margin-right: 25px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 0px;
+    background-color: #dbd695;
+    color: white;
+    width: 15vw;
+    border-radius: 3px;
+    min-width: 200px;
+    font-size: 90%;
+    font-family: 'Urbanist', sans-serif;
+    padding: 0.5% 2%;
+    gap: 3%;
+}
+.boton-modal-eliminar, .boton-modal-ocultar {
+    margin-right: 22px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 0px;
+    background-color: #dbd695;
+    color: white;
+    width: 12vw;
+    border-radius: 3px;
+    font-size: 90%;
+    font-family: 'Urbanist', sans-serif;
+    padding: 0.5% 2%;
+    gap: 3%;
+}
+.btn_agregar:hover, .boton-modal-eliminar:hover, .boton-modal-ocultar:hover {
+    background: #d7b26c;
+}
+.btn_cancelar img, .btn_agregar img, .boton-modal img, .boton-modal-eliminar img, .boton-modal-ocultar img{
+    width: 14px;
+}
+
+/*Cards*/
+.card{
+    position: relative;
+    margin-bottom: 30px;
+    transition: 0.5s;
+    transition: ease-in-out;
+}
+.card h3, .card p {
+    padding: 7px;
+}
+.card:hover {
+    transition: 0.2s ease-in-out;
+    transform: scale(1.02);
+}
+.boton-editar{
+    margin: 5px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 100%;
+    border-width: 0px;
+    background-color: #d4d7d9;
+    right: 40px;
+}
+.boton-eliminar {
+    margin-left: 40px;
+    margin-top: 5px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 100%;
+    border-width: 0px;
+    background-color: #d4d7d9;
+    right: 8px;
+}
+.boton-ocultar {  
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 100%;
+    border-width: 0px;
+    background-color: #d4d7d9;
+    left:8px;
+    bottom: 80px;  
+}
+.boton-ocultar {
+    bottom: 118px; 
+}
+.boton-editar:hover, .boton-eliminar:hover, .boton-ocultar:hover {
+    background-color: #aeb9c0;
+}
